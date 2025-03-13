@@ -1,0 +1,24 @@
+---
+import Nav from './Nav.astro'
+---
+
+<section class='flex flex-col w-full h-screen'>
+  <Nav />
+  <div
+    class='grid grid-cols-2 grid-rows-2 gap-4 w-full h-full pb-[50px] place-content-center'
+  >
+    <div class='col-span-2 bg-gray-300 rounded-lg'>
+      <div class='w-full h-full p-5 grid grid-cols-2'>
+        <div class='flex flex-col justify-between'>
+          <h2 class='text-4xl'>Wedding Kit</h2>
+          <h3 class='text-2xl'>KIT</h3>
+        </div>
+        <div class='h-full w-full flex justify-end items-end'>
+          <button class='btn btn-wide'><a href='#'>Ver Mas</a></button>
+        </div>
+      </div>
+    </div>
+    <div class='row-start-2 bg-black rounded-lg'>5</div>
+    <div class='row-start-2 bg-amber-300 rounded-lg'>6</div>
+  </div>
+</section>
