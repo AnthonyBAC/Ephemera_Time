@@ -13,19 +13,20 @@
 
 }
 
-h2 {
-    font-size: 50px;
-}
 
-h3 {
-    font-size: 30px;
-}
 
+
+
+
+
+h1,
 h2,
 h3 {
     font-family: 'Josefin Sans Variable', sans-serif;
     font-weight: bold;
+
 }
+
 
 button,
 a {

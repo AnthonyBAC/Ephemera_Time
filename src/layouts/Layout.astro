@@ -32,9 +32,21 @@ const { title = 'Ephemera Time - En tus momentos mas especiales' } = Astro.props
 </html>
 
 <style is:global>
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   html,
   body {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
     height: auto;
   }

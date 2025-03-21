@@ -2,23 +2,38 @@
 import Nav from './Nav.astro'
 ---
 
-<section class='flex flex-col w-full h-screen'>
+<section class='flex flex-col w-full h-screen px-8 2xl:px-0'>
   <Nav />
   <div
-    class='grid grid-cols-2 grid-rows-2 gap-4 w-full h-full pb-[50px] place-content-center'
+    class='grid 2xl:grid-cols-2 lg:grid-rows-2 grid-rows-3 gap-4 w-full h-full pb-[50px] 2xl:place-content-center'
   >
-    <div class='col-span-2 bg-gray-300 rounded-lg'>
-      <div class='w-full h-full p-5 grid grid-cols-2'>
-        <div class='flex flex-col justify-between'>
-          <h2 class='text-4xl'>Wedding Kit</h2>
-          <h3 class='text-2xl'>KIT</h3>
-        </div>
-        <div class='h-full w-full flex justify-end items-end'>
-          <button class='btn btn-wide'><a href='#'>Ver Mas</a></button>
+    <div class='lg:col-span-2 bg-gray-300 rounded-lg p-15'>
+      <div class='w-full h-full flex flex-col'>
+        <h1 class='text-4xl'>Wedding Kit</h1>
+        <div class='h-full w-full flex justify-between items-end'>
+          <h2 class='text-2xl uppercase'>kit</h2>
+          <button class='btn btn-wide'><a href='/Weddingkit'>Ver Mas</a></button
+          >
         </div>
       </div>
     </div>
     <div class='row-start-2 bg-black rounded-lg'>5</div>
-    <div class='row-start-2 bg-amber-300 rounded-lg'>6</div>
+    <div class='lg:row-start-2 bg-amber-300 rounded-lg'>6</div>
   </div>
 </section>
+<style>
+  .btn {
+    padding: 2rem 1rem;
+  }
+  a {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 0.5;
+  }
+</style>
