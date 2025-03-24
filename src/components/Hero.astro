@@ -2,12 +2,16 @@
 import Nav from './Nav.astro'
 ---
 
-<section class='flex flex-col w-full h-screen px-8 2xl:px-0'>
-  <Nav />
+<Nav />
+<section
+  class='flex flex-col w-full h-screen 2xl:pb-40 pb-15 px-8 2xl:px-0 pt-[150px] 2xl:pt-0'
+>
   <div
-    class='grid 2xl:grid-cols-2 lg:grid-rows-2 grid-rows-3 gap-4 w-full h-full pb-[50px] 2xl:place-content-center'
+    class='mx-with grid 2xl:grid-cols-2 lg:grid-rows-2 grid-rows-3 gap-10 w-full h-full 2xl:py-15 2xl:place-content-center'
   >
-    <div class='lg:col-span-2 bg-gray-300 rounded-lg p-15'>
+    <div
+      class='lg:col-span-2 bg-[url(/banner_wedding-kit.jpg)] bg-cover bg-no-repeat bg-[center_top_-25rem] rounded-lg 2xl:p-15 p-5 shadow-xl'
+    >
       <div class='w-full h-full flex flex-col'>
         <h1 class='text-4xl'>Wedding Kit</h1>
         <div class='h-full w-full flex justify-between items-end'>
@@ -20,20 +24,80 @@ import Nav from './Nav.astro'
         </div>
       </div>
     </div>
-    <div class='row-start-2 bg-black rounded-lg'>5</div>
-    <div class='lg:row-start-2 bg-amber-300 rounded-lg'>6</div>
+    <div
+      class='row-start-2 rounded-lg shadow-xl 2xl:p-15 p-5 bg-[url(/banner_for_her.jpg)] bg-cover'
+    >
+      <div class='w-full h-full flex flex-col'>
+        <h1 class='text-4xl'>Box for her</h1>
+        <div class='h-full w-full flex justify-between items-end'>
+          <h2 class='text-2xl uppercase'>box</h2>
+          <a
+            href='/Weddingkit'
+            class='btn btn-wide'
+            >Ver Mas</a
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class='lg:row-start-2 bg-cover rounded-lg shadow-xl 2xl:p-15 p-5 back-image'
+    >
+      <div class='w-full h-full flex flex-col'>
+        <h1 class='text-4xl'>Box for him</h1>
+        <div class='h-full w-full flex justify-between items-end'>
+          <h2 class='text-2xl uppercase'>box</h2>
+          <a
+            href='/Weddingkit'
+            class='btn btn-wide'
+            >Ver Mas</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 <style>
+  .back-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .back-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/banner_forhim.jpg');
+    background-size: cover;
+    background-position: center top;
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 0.5;
+  }
+
+  @media (width >= 96rem) {
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+    a {
+      font-size: 1.8rem;
+    }
   }
 </style>

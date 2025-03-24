@@ -14,10 +14,53 @@
 }
 
 
+/* Shapes */
 
+.wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.wave-top svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 96px;
+}
 
+.wave-top .shape-fill {
+    fill: #FFFFFF;
+}
 
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 96px;
+}
+
+.wave-bottom .shape-fill {
+    fill: #FFFFFF;
+}
+
+.mx-with {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 h1,
 h2,
@@ -29,10 +72,12 @@ h3 {
 
 .btn {
     padding: 2rem 1rem;
+    border-radius: 3rem;
 }
 
 button,
-a {
+a,
+p {
     font-family: 'Montserrat Variable', sans-serif;
     font-weight: 300;
     font-size: 16px;
